@@ -1,8 +1,8 @@
 <script setup></script>
 
 <template>
-  <!-- 一级路由出口 -->
+  <!-- 二级路由出口 -->
   <router-view></router-view>
 </template>
 
-<style scoped></style>
+<style lang="sass" scoped></style>

@@ -14,13 +14,23 @@ export default defineConfig({
       resolvers: [ElementPlusResolver()],
     }),
     Components({
-      resolvers: [ElementPlusResolver()],
+      resolvers: [
+        // 1、配置elementPlus采用sass样式配色系统
+        ElementPlusResolver({ importStyle: "sass" }),
+      ],
     }),
   ],
   resolve: {
     // 实际的路径转换，jsconfig.json 只是做提示的
     alias: {
       "@": fileURLToPath(new URL("./src", import.meta.url)),
+    },
+  },
+  css: {
+    preprocessorOptions: {
+      scss: {
+        additionalData: `@use "@/styles/element/index.scss" as *;`,
+      },
     },
   },
 });
