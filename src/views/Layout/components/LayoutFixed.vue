@@ -17,10 +17,13 @@ const categoryStore = useCategoryStore();
           :key="cate.id"
           class="home"
         >
-          <RouterLink to="/">{{ cate.name }}</RouterLink>
+          <RouterLink
+            active-class="active"
+            :to="`/category/${cate.id}`"
+            >{{ cate.name }}</RouterLink
+          >
         </li>
       </ul>
-
       <div class="right">
         <RouterLink to="/">品牌</RouterLink>
         <RouterLink to="/">专题</RouterLink>

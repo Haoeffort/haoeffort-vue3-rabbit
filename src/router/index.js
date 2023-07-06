@@ -15,16 +15,30 @@ const router = createRouter({
           component: () => import("@/views/home/index.vue"),
         },
         {
-          path: 'category',
-          component: () => import("@/views/category/index.vue"),
-        }
-      ]
+          path: "category/:id", // :id 动态接受分类id参数
+          name: "category",
+          component: () =>
+            import("@/views/category/index.vue"),
+        },
+        {
+          path: "category/sub/:id",
+          name: "sub",
+          component: () =>
+            import("@/views/SubCategory/index.vue"),
+        },
+      ],
     },
     {
       path: "/login",
       component: Login,
     },
   ],
+  // 切换不同路由的时候，自动滚到顶部
+  scrollBehavior() {
+    return {
+      top: 0,
+    };
+  },
 });
 
 export default router;

@@ -17,6 +17,7 @@ onMounted(() => {
   <layout-nav></layout-nav>
   <layout-header></layout-header>
   <!-- 二级路由出口 -->
+  <!-- <router-view :key="$route.fullPath"></router-view> -->
   <router-view></router-view>
   <layout-footer></layout-footer>
 </template>

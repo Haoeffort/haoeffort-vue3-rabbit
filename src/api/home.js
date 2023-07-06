@@ -1,9 +1,12 @@
 import instance from "@/utils/http";
 
-export function getBannerAPI() {
+export function getBannerAPI(distributionSite = "1") {
   return instance({
     url: "home/banner",
     method: "get",
+    params: {
+      distributionSite,
+    },
   });
 }
 
