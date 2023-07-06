@@ -1,7 +1,8 @@
 import instance from "@/utils/http";
 
-export function getCategory() {
+export function getCategoryAPI() {
   return instance({
     url: "home/category/head",
+    method: "get",
   });
 }

@@ -4,4 +4,4 @@
   <div>登录</div>
 </template>
 
-<style lang="sass" scoped></style>
+<style lang="scss" scoped></style>
